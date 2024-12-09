@@ -1,4 +1,5 @@
-This code contains the .NET Core Web API backend for the Informations Systems course project. To run in your environment, create appsettings.json file as follows:
+This code contains the .NET Core Web API backend for the Informations Systems course project. To run in your environment, first create an SQL Server database called 'finance', then
+create appsettings.json file as follows:
 ```
 {
   "ConnectionStrings": {
