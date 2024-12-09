@@ -24,6 +24,18 @@ and replace the {} with your own values. A key for financial modelling prep can 
 
 https://site.financialmodelingprep.com/
 
+The site supports admin and user roles. Admins can also delete comments made by users on specific stocks. To change the user type created by the register endpoint:
+
+In TokenService (line 27):
+```
+claims.Add(new Claim(ClaimTypes.Role, "Admin"));
+```
+And in AccountController:
+
+```
+var roleResult = await _userManager.AddToRoleAsync(user, "Admin");
+```
+
 ![image](https://github.com/user-attachments/assets/0e7e85b6-c682-40b6-b532-d0dd19b39fb6)
 
 ![image](https://github.com/user-attachments/assets/38b1d0ca-e764-4e11-9bcc-c40327e0802e)
